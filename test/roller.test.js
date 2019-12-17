@@ -1,5 +1,5 @@
-const chai = require("chai"),
-    expect = chai.expect;
+const chai = require("chai");
+const expect = chai.expect;
 const roller = require("../client/utils/roller.js");
 
 describe("Roller", () => {

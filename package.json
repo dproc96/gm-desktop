@@ -12,18 +12,33 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
-    "test": "mocha"
+    "test": "mocha --require @babel/register && cd client && mocha --require @babel/register"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/register": "^7.7.4",
     "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.18.7",
+    "react-dom": "^16.12.0",
+    "react-scripts": "^3.3.0",
+    "react": "^16.12.0"
   },
   "dependencies": {
     "chai": "^4.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mocha": "^6.2.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   }
 }
