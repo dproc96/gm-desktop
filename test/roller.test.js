@@ -1,6 +1,6 @@
 const chai = require("chai");
 const expect = chai.expect;
-const roller = require("../client/utils/roller.js");
+const roller = require("../client/src/utils/roller");
 
 describe("Roller", () => {
     it("Should return a number greater than 0", () => {
